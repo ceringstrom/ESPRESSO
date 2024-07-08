@@ -18,7 +18,8 @@ function ESPRESSO(K, data, subsequence, chain_len)
         [~, wcac(i,:)] = calculateSemanticDensityMatrix(MP,MPI, chain_length, subsequence);
     end
     [espTT,~] = separateGreedyIG(data, K, wcac, 0.01);
-    return espTT
+    % return espTT
+end
 
 function [MP, MPI] = computMP(Integ_TS, subsequence)
     for i=1:1:size(Integ_TS,1)
